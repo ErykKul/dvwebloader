@@ -853,7 +853,7 @@ async function directUploadFinished() {
                     data: fd,
                     processData: false,
                     success: function(body, statusText, jqXHR) {
-                        console.log("All files sent to " + siteUrl + '/dataset.xhtml?persistentId=doi:' + datasetPid + '&version=DRAFT');
+                        console.log("All files sent to " + siteUrl + '/dataset.xhtml?persistentId=' + datasetPid + '&version=DRAFT');
                         addMessage('success', 'msgUploadComplete');
                     },
                     error: function(jqXHR, textStatus, errorThrown) {
