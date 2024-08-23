@@ -136,7 +136,7 @@ function addIconAndLogo(siteUrl) {
                 .attr(
                     'href',
                     siteUrl +
-                    '/javax.faces.resource/images/fav/apple-touch-icon.png.xhtml'))
+                    '/jakarta.faces.resource/images/fav/apple-touch-icon.png.xhtml'))
         .append(
             $('<link/>')
                 .attr('type', 'image/png')
@@ -145,7 +145,7 @@ function addIconAndLogo(siteUrl) {
                 .attr(
                     'href',
                     siteUrl +
-                    '/javax.faces.resource/images/fav/favicon-16x16.png.xhtml'))
+                    '/jakarta.faces.resource/images/fav/favicon-16x16.png.xhtml'))
         .append(
             $('<link/>')
                 .attr('type', 'image/png')
@@ -154,7 +154,7 @@ function addIconAndLogo(siteUrl) {
                 .attr(
                     'href',
                     siteUrl +
-                    '/javax.faces.resource/images/fav/favicon-32x32.png.xhtml'))
+                    '/jakarta.faces.resource/images/fav/favicon-32x32.png.xhtml'))
 
         .append(
             $('<link/>')
@@ -163,7 +163,7 @@ function addIconAndLogo(siteUrl) {
                 .attr(
                     'href',
                     siteUrl +
-                    '/javax.faces.resource/images/fav/safari-pinned-tab.svg.xhtml'))
+                    '/jakarta.faces.resource/images/fav/safari-pinned-tab.svg.xhtml'))
         .append(
             $('<meta/>')
                 .attr('content', '#da532c')
@@ -172,8 +172,9 @@ function addIconAndLogo(siteUrl) {
             $('<meta/>')
                 .attr('content', '#ffffff')
                 .attr('name', 'theme-color'));
-    $('#logo').attr('src', siteUrl + '/logos/preview_logo.png');
-
+    $('#logo')
+        .attr('src', siteUrl + '/logos/preview_logo.svg')
+        .attr('onerror', "handleImageError(this,'".concat(siteUrl).concat("')"));
 }
 function initTranslation() {
     initSpanTxt('title-text', 'title');
